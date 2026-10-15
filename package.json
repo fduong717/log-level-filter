@@ -1,0 +1,17 @@
+{
+  "name": "log-level-filter",
+  "version": "0.1.0",
+  "description": "Filters log messages by severity using tunable thresholds per dot-separated namespace.",
+  "type": "module",
+  "main": "src/index.js",
+  "exports": "./src/index.js",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "test": "node --test"
+  },
+  "keywords": [],
+  "license": "MIT",
+  "dependencies": {}
+}
