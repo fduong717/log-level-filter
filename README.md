@@ -39,3 +39,10 @@ Unknown level strings throw `RangeError` at configuration time and at call time.
 - `filter.shouldLog(namespace, level)` — boolean: does this message propagate?
 - `filter.unsetThreshold(namespace)` — remove a namespace's override so it falls back to its parent. Root cannot be unset; returns `false` in that case.
 - `LEVELS` — frozen `{ silent: 0, trace: 1, debug: 2, info: 3, warn: 4, error: 5, fatal: 6 }`.
+
+## Performance
+
+The window keeps a bounded buffer, so `push` is constant time and memory does not
+grow with the length of the stream. `peak` and `trough` are linear in the window
+size, which is the trade that keeps `push` cheap.
+
