@@ -1,6 +1,6 @@
 {
   "name": "log-level-filter",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Filters log messages by severity using tunable thresholds per dot-separated namespace.",
   "type": "module",
   "main": "src/index.js",
